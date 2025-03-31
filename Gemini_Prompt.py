@@ -22,7 +22,7 @@ def to_markdown(text):
 #from google.colab import userdata
 
 # Or use `os.getenv('GEMINI_API_KEY')` to fetch an environment variable.
-#GOOGLE_API_KEY = userdata.get("tu clave") ### setx GOOGLE_API_KEY "AIzaSyC9kxPTcsYQGCBfplJokrv9Sl5YRpBMvF8" #guardada en clave de entorno
+#GOOGLE_API_KEY = userdata.get("tu clave") ### setx GOOGLE_API_KEY "" #guardada en clave de entorno
 
 ## Obetenr el key 
 load_dotenv()  # Cargar variables del archivo .env
