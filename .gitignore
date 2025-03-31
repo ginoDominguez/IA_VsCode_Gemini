@@ -1,0 +1,2 @@
+# Ignorar el archivo .env para que no se suba a GitHub
+.env
