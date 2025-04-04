@@ -22,11 +22,17 @@ def to_markdown(text):
 #from google.colab import userdata
 
 # Or use `os.getenv('GEMINI_API_KEY')` to fetch an environment variable.
-#GOOGLE_API_KEY = userdata.get("tu clave") ### setx GOOGLE_API_KEY "AIzaSyC9kxPTcsYQGCBfplJokrv9Sl5YRpBMvF8" #guardada en clave de entorno
+#GOOGLE_API_KEY = userdata.get("tu clave") ### setx GOOGLE_API_KEY "" #guardada en clave de entorno
 
 ## Obetenr el key 
-load_dotenv()  # Cargar variables del archivo .env
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+#load_dotenv()  # Cargar variables del archivo .env
+#GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+from kaggle_secrets import UserSecretsClient
+user_secrets = UserSecretsClient()
+GOOGLE_API_KEY = user_secrets.get_secret("GOOGLE_API_KEY")
+
+
 
 if GOOGLE_API_KEY is None:
     raise ValueError("La API Key no está configurada. Asegúrate de haberla guardado como variable de entorno.")
